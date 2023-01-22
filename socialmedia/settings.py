@@ -178,7 +178,8 @@ SOCIALACCOUNT_PROVIDERS = {
     }
 }
 
-SITE_ID = 5
+#6 corresponds to djsocials.railwaty
+SITE_ID = 6
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'login'
