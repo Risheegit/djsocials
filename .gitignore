@@ -1,6 +1,7 @@
 .env
 
 .vscode
+.prettierignore
 data.json
 datadump.json
 db.sqlite3

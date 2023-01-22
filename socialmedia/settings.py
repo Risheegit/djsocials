@@ -24,7 +24,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = str (os.environ.get('DEBUG')) == "1" #1 is true
+# DEBUG = str (os.environ.get('DEBUG')) == "1" #1 is true
+DEBUG = True
 #DEBUG = False
 
 ALLOWED_HOSTS = ['*']
@@ -160,6 +161,9 @@ AUTHENTICATION_BACKENDS = [
 
 ]
 
+GOOGLE_OAUTH2_CLIENT_ID = '8107519436-adkjabui2der3m1inr84fqepil83gh78.apps.googleusercontent.com'
+GOOGLE_OAUTH2_CLIENT_SECRET = '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'
+
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
         'SCOPE': [
@@ -168,11 +172,13 @@ SOCIALACCOUNT_PROVIDERS = {
         ],
         'AUTH_PARAMS': {
             'access_type': 'online',
-        }
+        },
+        'CLIENT_ID': GOOGLE_OAUTH2_CLIENT_ID,
+        'SECRET': GOOGLE_OAUTH2_CLIENT_SECRET,
     }
 }
 
-SITE_ID = 3
+SITE_ID = 5
 
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'login'
